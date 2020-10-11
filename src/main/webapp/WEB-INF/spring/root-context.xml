@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		<bean id="flightValidator" class="com.neu.validators.FlightValidator"></bean>	
+	<bean id="airplaneValidator" class="com.neu.validators.AirplaneValidator"></bean>	
+	<bean id="passengerValidator" class="com.neu.validators.PassengerValidator"></bean>	
+	<bean id="paymentValidator" class="com.neu.validators.PaymentValidator"></bean>
+	<bean id= "login" class="com.me.dao.LoginDAO"></bean>	
+	<bean id= "adao" class = "com.me.dao.AirplaneDAO"></bean>
+	<bean id="fdao" class="com.me.dao.FlightDetailsDAO"></bean>	
+	<bean id="ldao" class="com.me.dao.ListFlightsDAO"></bean>	
+	<bean id="pdao" class="com.me.dao.PassengerDAO"></bean>
+	<bean id="tdao" class="com.me.dao.TicketDAO"></bean> 
+</beans>

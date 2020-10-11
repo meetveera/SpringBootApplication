@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Passenger List</title>
+     <style>   
+        .flat-table {
+  display: block;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 100%;
+  overflow: auto;
+  width: auto;
+  }
+  
+  th {
+    background-color: rgb(112, 196, 105);
+    color: white;
+    font-weight: normal;
+    padding: 10px 10px;
+    text-align: center;
+  }
+  td {
+    background-color: rgb(238, 238, 238);
+    color: rgb(111, 111, 111);
+    padding: 10px 10px;
+  }
+
+body {
+        	 background-image : url("https://i2.cdn.turner.com/money/dam/assets/160829123506-airfare-financing-540x304.jpg");
+       /*  background-image : url("C:/Users/meetv/Documents/workspace-sts-3.9.8.RELEASE/Final_Project/flight-tracker.jpg"); */
+				background-size: 1300px 800px;
+				background-repeat: no-repeat;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    </style>
+    
+</head>
+<body>
+<h3> Below are the passengers details</h3>
+<table class="flat-table">
+<tr>
+	<th>Passenger Name</th>
+	<th>Passenger Email</th>
+	<th>Flight Name</th>
+	<th>Travelling From</th>
+	<th>Destination</th>
+	<th>Date of travel</th>
+</tr>
+	#foreach($passenger in $ticketList)
+	<tr>
+		
+		<td>$passenger.passengerDetails.firstName</td>
+		<td>$passenger.passengerDetails.email</td>
+		<td>$passenger.flightDetails.flight_name</td>
+		<td>$passenger.flightDetails.from</td>
+		<td>$passenger.flightDetails.dest</td>
+		<td>$passenger.flightDetails.deptDate</td>
+	</tr>
+	#end
+</table>
+<h3><a href="adminHome.htm">Go Back to Menu Page</a></h3>
+</body>
+</html>
